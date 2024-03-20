@@ -3,8 +3,8 @@ const Cakes = ({ title, rating, ingredients, price }) => {
       <>
         <h3>{title} :</h3>
         <h4>Ingredients: {ingredients}</h4>
-        <h4>Price: £{price}</h4>
-        <h4>Current Rating: {rating}</h4>
+        <h5>Price: £{price}</h5>
+        <h5>Current Rating: {rating}</h5>
       </>
     );
   }
