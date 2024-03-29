@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Cakes from "../components/Cakes";
 
-
 const CakeContainer = ({}) => {
 
     const [cakes, setCakes] = useState([
@@ -15,6 +14,7 @@ const CakeContainer = ({}) => {
     const average = () => {
         const totalAverage = cakes.reduce ((acc, cake) => 
         acc + cake.rating, 0);
+        return totalAverage / cakes.length;
     }
     return (
         <>
@@ -27,6 +27,7 @@ const CakeContainer = ({}) => {
                     price={cake.price}
                 />
             ))}
+            <h3 className="averagerating">Average Rating: {average()}</h3>
         </>
     );
     
